@@ -645,6 +645,15 @@ function RobinhoodWebApi(opts, callback) {
     );
   };
 
+  api.instrumentsId = function (id, callback) {
+    return _request.get(
+      {
+        uri: _apiUrl + _endpoints.instruments + id,
+      },
+      callback
+    );
+  };
+
   api.url = function (url, callback) {
     return _request.get(
       {
